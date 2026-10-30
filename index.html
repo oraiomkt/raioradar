@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Os eventos de TI, IA e dados, automação, indústria, saneamento e energia dos próximos 3 meses no Rio Grande do Sul. Atualizado toda segunda. Feito pela Raio.">
+<meta property="og:title" content="Radar de Eventos · Feito pela Raio">
+<meta property="og:description" content="Eventos de TI, IA, automação, indústria, saneamento e energia no RS, atualizados toda segunda.">
+<meta name="theme-color" content="#111799">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230027bd'/%3E%3Ccircle cx='32' cy='32' r='20' fill='none' stroke='%239deee7' stroke-width='5' opacity='.6'/%3E%3Ccircle cx='32' cy='32' r='9' fill='%2317e3cb'/%3E%3C/svg%3E">
+<title>Radar de Eventos</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+html{color-scheme:light}
+html,body{margin:0}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+[hidden]{display:none!important}
+img{max-width:100%}
+/* Layout: cabeçalho com a marca raio e a meta mensal → faixa café "desta semana" → filtros → linha do tempo por mês (ou calendário) → assinatura Raio */
+/* Cores do Manual de Marca Aegea 2026 (institucionais #0027BD, #17E3CB, #9DEEE7; neutras #E2E5F0, #8C91A4, #44495C, #191B23; secundária #F8DC00 para destaques). Nomes dos tokens mantidos do guia Raio: café = cor de ação, mostarda = destaque pontual, leite = fundo suave */
+:root{
+  --fundo:#f3f5fa; --superficie:#ffffff; --leite:#e2e5f0; --grao:#191b23; --texto2:#44495c; --linha:#d9dce8;
+  --cafe:#0027bd; --on-cafe:#ffffff; --mostarda:#f8dc00; --on-mostarda:#191b23; --borda:#7a7f93;
+  --faixa:#111799; --on-faixa:#ffffff; --faixa-ponto:#17e3cb;
+  --f-display:"Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --f-body:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+  --r:14px; --r-xl:18px; --r-sm:6px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --fundo:#191b23; --superficie:#22252f; --leite:#2c3040; --grao:#f3f5fa; --texto2:#a3a8ba; --linha:#363a4a;
+  --cafe:#17e3cb; --on-cafe:#191b23; --mostarda:#f8dc00; --on-mostarda:#191b23; --borda:#7d8297;
+  --faixa:#111799; --on-faixa:#ffffff; --faixa-ponto:#17e3cb; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --fundo:#191b23; --superficie:#22252f; --leite:#2c3040; --grao:#f3f5fa; --texto2:#a3a8ba; --linha:#363a4a;
+  --cafe:#17e3cb; --on-cafe:#191b23; --mostarda:#f8dc00; --on-mostarda:#191b23; --borda:#7d8297;
+  --faixa:#111799; --on-faixa:#ffffff; --faixa-ponto:#17e3cb; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--fundo);color:var(--grao);font-family:var(--f-body);font-size:15px;line-height:1.55;font-variant-numeric:tabular-nums}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--superficie)}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:var(--cafe)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--cafe);outline-offset:2px}
+.lbl,.k,.dow{font-family:var(--f-mono);font-size:.7rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--texto2)}
+
+/* cabeçalho */
+header.top{background:var(--superficie);border-bottom:1px solid var(--linha)}
+.top .wrap{display:flex;flex-wrap:wrap;gap:22px 36px;align-items:flex-end;justify-content:space-between;padding-block:22px 20px}
+.brand{display:flex;flex-direction:column;gap:12px;min-width:0}
+.feito{display:inline-flex;align-items:center;gap:7px;align-self:flex-start;border:1px solid var(--linha);border-radius:999px;padding:3px 11px 3px 4px;font-family:var(--f-mono);font-size:.68rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--texto2);text-decoration:none;background:var(--fundo)}
+.feito .av{width:20px;height:20px;flex:none}
+.feito b{font-family:var(--f-display);font-weight:800;font-size:.95rem;letter-spacing:-.04em;text-transform:none;color:var(--grao)}
+.logo{display:inline-flex;align-items:flex-end;gap:2px;text-decoration:none;align-self:flex-start}
+.logo .word{font-family:var(--f-display);font-weight:800;font-size:30px;line-height:.8;letter-spacing:-.05em;color:var(--grao)}
+.logo svg{width:15px;height:15px;margin-bottom:-3px}
+.logo .r-out{stroke:var(--cafe);opacity:.25}
+.logo .r-in{stroke:var(--cafe);opacity:.55}
+.logo .r-out,.logo .r-in{animation:pulse 3.2s ease-out infinite}
+.logo .r-out{animation-delay:.4s}
+@keyframes pulse{0%,100%{stroke-width:4}50%{stroke-width:6}}
+@media (prefers-reduced-motion:reduce){.logo .r-out,.logo .r-in{animation:none}}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2rem,6vw,3rem);line-height:1;margin:0;letter-spacing:-.03em;text-wrap:balance}
+h1 mark{background:var(--mostarda);color:var(--on-mostarda);border-radius:var(--r-sm);padding:0 .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.sub{color:var(--texto2);font-size:.92rem;margin:0;max-width:62ch}
+.sub b{color:var(--grao);font-weight:600}
+.goal{display:flex;flex-direction:column;gap:8px}
+.months{display:flex;gap:8px;flex-wrap:wrap}
+.mo{display:flex;align-items:center;gap:7px;border:1px solid var(--borda);border-radius:999px;padding:4px 12px 4px 5px;font-size:.84rem;background:var(--fundo)}
+.mo .dot{width:20px;height:20px;border-radius:50%;border:2px dashed var(--borda);display:grid;place-items:center;font-size:.72rem;font-weight:700}
+.mo.part .dot{border:2px solid var(--cafe);background:radial-gradient(circle,var(--mostarda) 0 4px,transparent 4.5px)}
+.mo.done .dot{border:2px solid var(--cafe);background:var(--cafe);color:var(--on-cafe)}
+.mo.done{border-color:var(--cafe)}
+
+/* faixa da semana */
+.note{margin-top:22px;background:var(--faixa);color:var(--on-faixa);border-radius:var(--r-xl);padding:16px 20px;font-size:.95rem;display:flex;gap:14px;align-items:flex-start}
+.note .ping{flex:none;width:12px;height:12px;border-radius:50%;background:var(--faixa-ponto);margin-top:6px}
+.note strong{font-family:var(--f-display);font-weight:700}
+
+/* filtros */
+.controls{display:flex;flex-direction:column;gap:10px;margin-top:22px}
+.row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.row .k{width:84px;flex:none}
+.chip{border:1px solid var(--borda);background:var(--superficie);border-radius:999px;padding:6px 13px;font-size:.85rem;cursor:pointer;line-height:1.2}
+.chip[aria-pressed="true"]{background:var(--cafe);border-color:var(--cafe);color:var(--on-cafe)}
+.chip:hover{border-color:var(--cafe)}
+.bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:center;margin-top:18px;padding-top:14px;border-top:1px solid var(--linha)}
+.count{font-size:.9rem;color:var(--texto2)}
+.count b{color:var(--grao);font-family:var(--f-mono);font-weight:500}
+.seg{display:inline-flex;border:1px solid var(--borda);border-radius:999px;overflow:hidden;background:var(--superficie)}
+.seg button{border:0;background:transparent;padding:6px 14px;cursor:pointer;font-size:.85rem}
+.seg button[aria-pressed="true"]{background:var(--grao);color:var(--fundo)}
+
+/* linha do tempo */
+main{padding-block:10px 72px}
+.month h2{font-family:var(--f-display);font-weight:800;letter-spacing:-.02em;font-size:1.5rem;margin:32px 0 12px;display:flex;align-items:baseline;gap:12px}
+.month h2 span{font-family:var(--f-mono);font-size:.72rem;color:var(--texto2);font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.ev{display:grid;grid-template-columns:76px 1fr;gap:18px;background:var(--superficie);border:1px solid var(--linha);border-radius:var(--r);padding:18px;margin-bottom:10px}
+.ev.hl{border-color:var(--cafe)}
+.ev.past{opacity:.55}
+.date{text-align:center;line-height:1.1;padding-top:2px}
+.date .d{font-family:var(--f-display);font-size:2.1rem;font-weight:800;letter-spacing:-.03em;display:block}
+.date .w{font-family:var(--f-mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--texto2)}
+.date .to{font-family:var(--f-mono);font-size:.68rem;color:var(--texto2);display:block;margin-top:5px}
+.body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.ttl{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline}
+.ttl h3{font-family:var(--f-display);font-weight:700;font-size:1.18rem;margin:0;line-height:1.2;letter-spacing:-.01em;text-wrap:balance}
+.badge{font-family:var(--f-mono);font-size:.64rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.b-new{background:var(--mostarda);color:var(--on-mostarda)}
+.b-pick{background:var(--cafe);color:var(--on-cafe)}
+.meta{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.88rem;color:var(--texto2)}
+.meta .price-gratuito,.meta .price-pago,.meta .price-a{font-size:.78rem;font-weight:600;border-radius:999px;padding:1px 10px}
+.meta .price-gratuito{background:var(--leite);color:var(--grao)}
+.meta .price-pago{border:1px solid var(--borda);color:var(--grao)}
+.meta .price-a{border:1px dashed var(--borda);color:var(--texto2);font-weight:500}
+.meta .mono{font-family:var(--f-mono);font-size:.78rem}
+.why{margin:0;font-size:.95rem;max-width:65ch}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{font-size:.76rem;background:var(--leite);border-radius:999px;padding:2px 10px;color:var(--grao)}
+.tag.aud{background:transparent;border:1px solid var(--linha);color:var(--texto2)}
+.acts{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:4px}
+.mk{border:1px solid var(--borda);background:var(--fundo);border-radius:999px;padding:5px 13px;font-size:.84rem;cursor:pointer}
+.mk:hover{border-color:var(--cafe)}
+.mk[aria-pressed="true"].quero{background:var(--mostarda);border-color:var(--mostarda);color:var(--on-mostarda)}
+.mk[aria-pressed="true"].inscrito{background:var(--cafe);border-color:var(--cafe);color:var(--on-cafe)}
+.mk[aria-pressed="true"].fui{background:var(--grao);border-color:var(--grao);color:var(--fundo)}
+.lnk{font-size:.86rem;font-weight:600;text-decoration:none;padding:5px 4px}
+.lnk:hover{text-decoration:underline}
+.who{display:flex;align-items:center;gap:6px;font-size:.8rem;color:var(--texto2);margin-left:auto}
+.who img{width:22px;height:22px;border-radius:50%;border:2px solid var(--superficie);margin-left:-8px}
+.who img:first-child{margin-left:0}
+
+.empty{background:var(--superficie);border:1px dashed var(--linha);border-radius:var(--r);padding:32px;text-align:center;color:var(--texto2);margin-top:24px}
+.empty h3{font-family:var(--f-display);color:var(--grao);margin:0 0 6px}
+
+/* calendário */
+.cal{margin-top:24px}
+.cal h2{font-family:var(--f-display);font-weight:800;letter-spacing:-.02em;font-size:1.35rem;margin:20px 0 8px}
+.grid-wrap{overflow-x:auto}
+.grid{display:grid;grid-template-columns:repeat(7,minmax(92px,1fr));gap:4px;min-width:660px}
+.dow{padding:2px 4px}
+.cell{background:var(--superficie);border:1px solid var(--linha);border-radius:10px;min-height:80px;padding:5px;display:flex;flex-direction:column;gap:3px}
+.cell.out{background:transparent;border-color:transparent}
+.cell.today{border-color:var(--cafe)}
+.cell .n{font-family:var(--f-mono);font-size:.7rem;color:var(--texto2)}
+.pill{font-size:.7rem;line-height:1.2;background:var(--leite);color:var(--grao);border-radius:6px;padding:3px 5px;border:0;text-align:left;cursor:pointer;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pill.on{background:var(--cafe);color:var(--on-cafe)}
+
+/* assinatura */
+footer{border-top:1px solid var(--linha);background:var(--superficie)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center;padding-block:24px 32px}
+footer p{margin:0;color:var(--texto2);font-size:.82rem;max-width:62ch}
+.sig{display:flex;flex-direction:column;gap:6px}
+.sig .slogan{font-family:var(--f-display);font-weight:700;font-size:1.05rem;color:var(--grao);letter-spacing:-.01em}
+.cta{display:inline-flex;align-items:center;gap:8px;background:var(--cafe);color:var(--on-cafe);border-radius:999px;padding:10px 18px;font-weight:600;text-decoration:none;font-size:.9rem}
+.cta:hover{filter:brightness(1.08)}
+@media (max-width:560px){
+  .ev{grid-template-columns:54px 1fr;gap:12px;padding:14px}
+  .date .d{font-size:1.6rem}
+  .row .k{width:100%}
+  .who{margin-left:0}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="feito"><svg class="av" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="32" fill="#4b3426"/><circle cx="32" cy="32" r="22" fill="none" stroke="#efe5dc" stroke-width="4" opacity=".3"/><circle cx="32" cy="32" r="14" fill="none" stroke="#efe5dc" stroke-width="4" opacity=".6"/><circle cx="32" cy="32" r="7.5" fill="#f0b92e"/></svg>Feito pela <b>raio</b></span>
+      <h1>Radar de <mark>Eventos</mark></h1>
+      <p class="sub">Os eventos de TI, IA &amp; dados, automação, indústria, saneamento e energia que valem a sua agenda nos próximos 3 meses, com foco no Rio Grande do Sul · <span id="upd">carregando…</span></p>
+    </div>
+    <div class="goal" aria-label="Meta de um evento por mês">
+      <span class="lbl">Sua meta · 1 evento por mês</span>
+      <div class="months" id="goal"></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="note" id="note" hidden><span class="ping" aria-hidden="true"></span><div><strong>Nesta semana</strong> · <span id="noteText"></span></div></div>
+
+  <div class="controls">
+    <div class="row" role="group" aria-label="Tema"><span class="k">Tema</span><div class="row" id="fTheme"></div></div>
+    <div class="row" role="group" aria-label="Para quem"><span class="k">Para quem</span><div class="row" id="fAud"></div></div>
+    <div class="row" role="group" aria-label="Onde e quanto"><span class="k">Filtros</span><div class="row" id="fMisc"></div></div>
+  </div>
+
+  <div class="bar">
+    <span class="count" id="count"></span>
+    <div class="seg" role="group" aria-label="Visualização">
+      <button id="vList" aria-pressed="true">Lista</button>
+      <button id="vCal" aria-pressed="false">Calendário</button>
+    </div>
+  </div>
+
+  <div id="list"></div>
+  <div id="cal" class="cal" hidden></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="sig">
+      <span class="feito"><svg class="av" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="32" fill="#4b3426"/><circle cx="32" cy="32" r="22" fill="none" stroke="#efe5dc" stroke-width="4" opacity=".3"/><circle cx="32" cy="32" r="14" fill="none" stroke="#efe5dc" stroke-width="4" opacity=".6"/><circle cx="32" cy="32" r="7.5" fill="#f0b92e"/></svg>Feito pela <b>raio</b></span>
+      <span class="slogan">Radar de Eventos</span>
+      <p>Um produto feito pela Raio · marketing com IA para negócios locais. A lista é atualizada toda segunda de manhã; datas e preços vêm das páginas oficiais, então confirme no link antes de se inscrever. Suas marcações ficam salvas neste navegador.</p>
+    </div>
+    <a class="cta" href="https://wa.me/5551996924325" target="_blank" rel="noopener">Fale com a Raio no WhatsApp</a>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const THEMES = {ia:"IA & dados", ti:"TI & cloud", automacao:"Automação", industria:"Indústria", saneamento:"Saneamento", energia:"Energia", processos:"Processos & Lean", inovacao:"Inovação"};
+  const AUD = {ti:"TI & dados", processos:"Processos & operação", energia:"Energia & eficiência"};
+  const MONTHS = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+  const DOW = ["dom","seg","ter","qua","qui","sex","sáb"];
+  const MARKS = [["quero","Quero ir"],["inscrito","Inscrito"],["fui","Fui"]];
+
+  const state = { events: [], meta: null, going: {}, myId: null, myMarks: {}, canMark: true,
+    f: { themes: new Set(), aud: new Set(), where: "todos", price: "todos", onlyNew: false }, view: "list" };
+
+  const todayISO = (() => { const d = new Date(); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); })();
+  const parse = s => { const [y,m,d] = s.split("-").map(Number); return new Date(y, m-1, d); };
+  const daysBetween = (a,b) => Math.round((parse(b)-parse(a))/864e5);
+  const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+
+  // local fallback for marks
+  const LS = "radar-marks";
+  try { const v = JSON.parse(localStorage.getItem(LS) || "{}"); if (v && typeof v === "object") state.myMarks = v; } catch (e) {}
+  const saveLocal = () => { try { localStorage.setItem(LS, JSON.stringify(state.myMarks)); } catch (e) {} };
+
+  // ---- filters UI
+  function chip(label, pressed, onClick){ const b = el("button","chip",label); b.type="button"; b.setAttribute("aria-pressed", pressed); b.onclick = onClick; return b; }
+  function buildFilters(){
+    const ft = document.getElementById("fTheme"); ft.replaceChildren();
+    Object.entries(THEMES).forEach(([k,v]) => ft.append(chip(v, state.f.themes.has(k), () => { state.f.themes.has(k) ? state.f.themes.delete(k) : state.f.themes.add(k); buildFilters(); render(); })));
+    const fa = document.getElementById("fAud"); fa.replaceChildren();
+    Object.entries(AUD).forEach(([k,v]) => fa.append(chip(v, state.f.aud.has(k), () => { state.f.aud.has(k) ? state.f.aud.delete(k) : state.f.aud.add(k); buildFilters(); render(); })));
+    const fm = document.getElementById("fMisc"); fm.replaceChildren();
+    [["todos","Todos os locais"],["rs","No RS"],["fora","Fora do RS"],["online","Online"]].forEach(([k,v]) => fm.append(chip(v, state.f.where===k, () => { state.f.where=k; buildFilters(); render(); })));
+    [["gratuito","Só gratuitos"],["pago","Só pagos"]].forEach(([k,v]) => fm.append(chip(v, state.f.price===k, () => { state.f.price = state.f.price===k ? "todos" : k; buildFilters(); render(); })));
+    fm.append(chip("Só novos", state.f.onlyNew, () => { state.f.onlyNew = !state.f.onlyNew; buildFilters(); render(); }));
+  }
+
+  function isNew(ev){ return ev.addedAt && daysBetween(ev.addedAt, todayISO) <= 7; }
+  function isPast(ev){ return (ev.end || ev.start) < todayISO; }
+  function filtered(){
+    const f = state.f;
+    return state.events.filter(ev => {
+      if (f.themes.size && !(ev.themes||[]).some(t => f.themes.has(t))) return false;
+      if (f.aud.size && !(ev.audience||[]).some(t => f.aud.has(t))) return false;
+      if (f.where === "rs" && !(ev.uf === "RS" && ev.format !== "online")) return false;
+      if (f.where === "fora" && !(ev.uf !== "RS" && ev.format !== "online")) return false;
+      if (f.where === "online" && ev.format === "presencial") return false;
+      if (f.price !== "todos" && ev.price !== f.price) return false;
+      if (f.onlyNew && !isNew(ev)) return false;
+      return true;
+    }).sort((a,b) => a.start.localeCompare(b.start) || (a.title||"").localeCompare(b.title||""));
+  }
+
+  function gcalLink(ev){
+    const s = ev.start.replace(/-/g,""); const endD = parse(ev.end || ev.start); endD.setDate(endD.getDate()+1);
+    const e = endD.getFullYear()+String(endD.getMonth()+1).padStart(2,"0")+String(endD.getDate()).padStart(2,"0");
+    const where = ev.format === "online" ? "Online" : [ev.venue, ev.city && ev.city+"/"+ev.uf].filter(Boolean).join(", ");
+    const p = new URLSearchParams({action:"TEMPLATE", text: ev.title, dates: s+"/"+e, details: (ev.why||"") + (ev.url ? "\n\n"+ev.url : ""), location: where});
+    return "https://calendar.google.com/calendar/render?" + p.toString();
+  }
+
+  // ---- goal tracker
+  function renderGoal(){
+    const g = document.getElementById("goal"); g.replaceChildren();
+    const base = parse(todayISO);
+    for (let i=0;i<3;i++){
+      const d = new Date(base.getFullYear(), base.getMonth()+i, 1);
+      const key = d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0");
+      let lvl = 0;
+      for (const [id, m] of Object.entries(state.myMarks)){
+        const ev = state.events.find(x => x.id === id); if (!ev || !ev.start.startsWith(key)) continue;
+        if (m === "inscrito" || m === "fui") lvl = 2; else if (m === "quero") lvl = Math.max(lvl,1);
+      }
+      const p = el("span","mo"+(lvl===2?" done":lvl===1?" part":""));
+      const dot = el("span","dot", lvl===2 ? "✓" : "");
+      p.append(dot, el("span", null, MONTHS[d.getMonth()].slice(0,3)));
+      p.title = lvl===2 ? "Meta do mês garantida" : lvl===1 ? "Você marcou interesse, falta se inscrever" : "Nenhum evento marcado neste mês";
+      g.append(p);
+    }
+  }
+
+  // ---- marks
+  async function setMark(id, m){
+    const next = state.myMarks[id] === m ? null : m;
+    if (next) state.myMarks[id] = next; else delete state.myMarks[id];
+    saveLocal(); render();
+  }
+
+  function card(ev){
+    const c = el("article","ev"+(ev.pick?" hl":"")+(isPast(ev)?" past":""));
+    const d = parse(ev.start);
+    const date = el("div","date");
+    date.append(el("span","w", DOW[d.getDay()]), el("span","d", String(d.getDate()).padStart(2,"0")));
+    if (ev.end && ev.end !== ev.start){ const e = parse(ev.end); date.append(el("span","to","até "+String(e.getDate()).padStart(2,"0")+"/"+String(e.getMonth()+1).padStart(2,"0"))); }
+    const b = el("div","body");
+    const t = el("div","ttl"); t.append(el("h3", null, ev.title));
+    if (isNew(ev)) t.append(el("span","badge b-new","Novo"));
+    if (ev.pick) t.append(el("span","badge b-pick","Destaque"));
+    b.append(t);
+    const m = el("div","meta");
+    const where = ev.format === "online" ? "Online" : [ev.venue, ev.city ? ev.city+"/"+ev.uf : null].filter(Boolean).join(" · ");
+    m.append(el("span", null, where + (ev.format === "hibrido" ? " (também online)" : "")));
+    if (ev.time) m.append(el("span","mono", ev.time));
+    if (ev.km != null && ev.format !== "online") m.append(el("span","mono", "~"+ev.km+" km de Esteio"));
+    const pr = el("span", (ev.price==="gratuito"||ev.price==="pago") ? "price-"+ev.price : "price-a", ev.price === "gratuito" ? "Gratuito" : ev.price === "pago" ? "Pago" : "Preço a confirmar");
+    if (ev.priceNote) pr.textContent += " · " + ev.priceNote;
+    m.append(pr);
+    b.append(m);
+    if (ev.why) b.append(el("p","why", ev.why));
+    const tg = el("div","tags");
+    (ev.themes||[]).forEach(x => THEMES[x] && tg.append(el("span","tag", THEMES[x])));
+    (ev.audience||[]).forEach(x => AUD[x] && tg.append(el("span","tag aud", "→ " + AUD[x])));
+    b.append(tg);
+    const a = el("div","acts");
+    MARKS.forEach(([k, lbl]) => {
+      const btn = el("button","mk "+k, lbl); btn.type="button";
+      btn.setAttribute("aria-pressed", state.myMarks[ev.id] === k);
+      btn.onclick = () => setMark(ev.id, k); a.append(btn);
+    });
+    if (ev.url){ const l = el("a","lnk","Página do evento ↗"); l.href = ev.url; l.target="_blank"; l.rel="noopener"; a.append(l); }
+    const g = el("a","lnk","+ Agenda"); g.href = gcalLink(ev); g.target="_blank"; g.rel="noopener"; g.title="Adicionar ao Google Agenda"; a.append(g);
+    b.append(a);
+    c.append(date, b);
+    return c;
+  }
+
+  function renderList(evs){
+    const box = document.getElementById("list"); box.replaceChildren();
+    if (!state.events.length){
+      const e = el("div","empty"); e.append(el("h3", null, "Os eventos aparecem aqui"), el("p", null, "A busca semanal preenche esta lista toda segunda de manhã. Se você acabou de abrir, aguarde alguns segundos."));
+      box.append(e); return;
+    }
+    if (!evs.length){ const e = el("div","empty"); e.append(el("h3", null, "Nada com esses filtros"), el("p", null, "Tire um ou dois filtros para ver mais eventos.")); box.append(e); return; }
+    const groups = new Map();
+    evs.forEach(ev => { const k = ev.start.slice(0,7); if (!groups.has(k)) groups.set(k, []); groups.get(k).push(ev); });
+    for (const [k, list] of groups){
+      const [y, mo] = k.split("-").map(Number);
+      const sec = el("section","month");
+      const h = el("h2", null, MONTHS[mo-1][0].toUpperCase()+MONTHS[mo-1].slice(1)+" "+y);
+      h.append(el("span", null, list.length + (list.length===1?" evento":" eventos")));
+      sec.append(h); list.forEach(ev => sec.append(card(ev))); box.append(sec);
+    }
+  }
+
+  function renderCal(evs){
+    const box = document.getElementById("cal"); box.replaceChildren();
+    const base = parse(todayISO);
+    for (let i=0;i<3;i++){
+      const first = new Date(base.getFullYear(), base.getMonth()+i, 1);
+      const days = new Date(first.getFullYear(), first.getMonth()+1, 0).getDate();
+      box.append(el("h2", null, MONTHS[first.getMonth()][0].toUpperCase()+MONTHS[first.getMonth()].slice(1)+" "+first.getFullYear()));
+      const wrap = el("div","grid-wrap"); const g = el("div","grid");
+      DOW.forEach(d => g.append(el("div","dow", d)));
+      for (let k=0;k<first.getDay();k++) g.append(el("div","cell out"));
+      for (let d=1; d<=days; d++){
+        const iso = first.getFullYear()+"-"+String(first.getMonth()+1).padStart(2,"0")+"-"+String(d).padStart(2,"0");
+        const cell = el("div","cell"+(iso===todayISO?" today":"")); cell.append(el("span","n", d));
+        evs.filter(ev => ev.start <= iso && (ev.end || ev.start) >= iso).forEach(ev => {
+          const p = el("button","pill"+(state.myMarks[ev.id]?" on":""), ev.short || ev.title); p.type="button"; p.title = ev.title;
+          p.onclick = () => { setView("list"); setTimeout(() => { const t = document.getElementById("ev-"+ev.id); if (t) t.scrollIntoView({behavior:"smooth", block:"center"}); }, 30); };
+          cell.append(p);
+        });
+        g.append(cell);
+      }
+      wrap.append(g); box.append(wrap);
+    }
+  }
+
+  function render(){
+    const evs = filtered();
+    const upcoming = evs.filter(e => !isPast(e)).length;
+    document.getElementById("count").innerHTML = "";
+    const cnt = document.getElementById("count");
+    const b = el("b", null, String(upcoming)); cnt.append(b, document.createTextNode(upcoming===1?" evento pela frente":" eventos pela frente"));
+    const nNew = state.events.filter(isNew).length; if (nNew) cnt.append(document.createTextNode(" · "+nNew+" novos nesta semana"));
+    renderList(evs);
+    document.querySelectorAll("#list .ev").forEach((n, i) => { n.id = "ev-" + evs[i].id; });
+    renderCal(evs); renderGoal();
+  }
+
+  function setView(v){
+    state.view = v;
+    document.getElementById("vList").setAttribute("aria-pressed", v==="list");
+    document.getElementById("vCal").setAttribute("aria-pressed", v==="cal");
+    document.getElementById("list").hidden = v !== "list";
+    document.getElementById("cal").hidden = v !== "cal";
+    try { localStorage.setItem("radar-view", v); } catch (e) {}
+  }
+  document.getElementById("vList").onclick = () => setView("list");
+  document.getElementById("vCal").onclick = () => setView("cal");
+  try { const v = localStorage.getItem("radar-view"); if (v === "cal") setView("cal"); } catch (e) {}
+
+  function renderMeta(){
+    const u = document.getElementById("upd");
+    if (state.meta && state.meta.updatedAt){ const d = parse(state.meta.updatedAt); u.replaceChildren(document.createTextNode("atualizado em "), el("b", null, String(d.getDate()).padStart(2,"0")+"/"+String(d.getMonth()+1).padStart(2,"0"))); }
+    else u.textContent = "aguardando a primeira atualização";
+    const n = document.getElementById("note");
+    if (state.meta && state.meta.weekNote){ document.getElementById("noteText").textContent = state.meta.weekNote; n.hidden = false; } else n.hidden = true;
+  }
+
+  buildFilters(); render(); renderMeta();
+
+  const DATA_URL = "https://raw.githubusercontent.com/oraiomkt/raioradar/dados/eventos.json";
+  async function load(){
+    const bust = "?h=" + Math.floor(Date.now()/36e5);
+    for (const src of [DATA_URL + bust, "./eventos.json" + bust]){
+      if (src.startsWith("__")) continue;
+      try {
+        const r = await fetch(src, { cache: "no-store" });
+        if (!r.ok) continue;
+        const j = await r.json();
+        state.events = (j.events || []).filter(e => e.start && e.title);
+        state.meta = j.meta || null;
+        render(); renderMeta(); return;
+      } catch (e) {}
+    }
+    document.getElementById("upd").textContent = "não foi possível carregar os eventos agora";
+  }
+  load();
+})();
+</script>
+</body>
+</html>

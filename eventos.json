@@ -1,0 +1,295 @@
+{
+  "meta": {
+    "updatedAt": "2026-10-30",
+    "weekNote": "Novembro concentra os melhores eventos: COBEE para eficiência energética, CONIPC em Canoas para o saneamento e o TDC em dezembro para TI. Janeiro ainda está vazio; a busca de cada segunda vai completar.",
+    "window": "2026-10-30 a 2027-01-31"
+  },
+  "events": [
+    {
+      "addedAt": "2026-10-30",
+      "audience": [
+        "ti"
+      ],
+      "city": "Porto Alegre",
+      "end": "2026-11-04",
+      "format": "presencial",
+      "km": 20,
+      "pick": true,
+      "price": "a confirmar",
+      "short": "Esquenta TDC: IA Agêntica",
+      "source": "Sympla",
+      "start": "2026-11-04",
+      "themes": [
+        "ia",
+        "ti"
+      ],
+      "time": "19h–21h45",
+      "title": "Esquenta TDC · IA Agêntica na prática",
+      "uf": "RS",
+      "url": "https://www.sympla.com.br/evento/esquenta-tdc-ia-agentica-na-pratica-desafios-da-adocao-da-ia-que-decide-sozinha/3608669",
+      "venue": "Instituto Caldeira",
+      "why": "Palestra de um Java Champion (IBM) sobre agentes de IA e painel sobre levar IA da experimentação para a operação. Tem workshop de sistemas multiagentes da FIAP com vagas limitadas e inscrição separada.",
+      "id": "esquenta-tdc-ia-agentica-2026-11-04"
+    },
+    {
+      "addedAt": "2026-10-30",
+      "audience": [
+        "energia",
+        "processos"
+      ],
+      "city": "São Paulo",
+      "end": "2026-11-17",
+      "format": "presencial",
+      "km": 1100,
+      "pick": true,
+      "price": "a confirmar",
+      "short": "COBEE 2026",
+      "source": "Cenário Energia",
+      "start": "2026-11-16",
+      "themes": [
+        "energia",
+        "saneamento",
+        "ia"
+      ],
+      "title": "COBEE 2026 · Congresso Brasileiro de Eficiência Energética",
+      "uf": "SP",
+      "url": "https://cenarioenergia.com.br/2026/10/15/cobee-2026-debate-regulacao-e-tecnologias-para-eficiencia-energetica/",
+      "venue": "São Paulo",
+      "why": "Principal congresso de eficiência energética do país, promovido pela Abesco, com MME, Aneel e ENBPar. Debate gestão da demanda, IoT e IA aplicadas à energia, com participação de entidades do saneamento. Vale a viagem para quem trabalha com energia.",
+      "id": "cobee-2026"
+    },
+    {
+      "addedAt": "2026-10-30",
+      "audience": [
+        "processos",
+        "energia"
+      ],
+      "city": "Joinville",
+      "end": "2026-11-19",
+      "format": "presencial",
+      "km": 560,
+      "price": "a confirmar",
+      "priceNote": "seminários com ingresso à parte",
+      "short": "Expoindustrial Sul",
+      "source": "Sympla",
+      "start": "2026-11-16",
+      "themes": [
+        "industria",
+        "automacao",
+        "processos"
+      ],
+      "time": "a partir das 14h",
+      "title": "Expoindustrial Sul 2026",
+      "uf": "SC",
+      "url": "https://www.sympla.com.br/evento/expoindustrial-sul-2026/3486582",
+      "venue": "Expocentro Edmundo Doubrawa",
+      "why": "Feira de automação e Indústria 4.0 com seminário de manutenção e confiabilidade e o Encontro do Programa 5S e Excelência Operacional, bom para a frente de processos.",
+      "id": "expoindustrial-sul-2026"
+    },
+    {
+      "addedAt": "2026-10-30",
+      "audience": [
+        "ti"
+      ],
+      "city": "San Francisco",
+      "end": "2026-11-20",
+      "format": "online",
+      "price": "gratuito",
+      "priceNote": "acesso digital",
+      "short": "MS Ignite (online)",
+      "source": "Microsoft",
+      "start": "2026-11-17",
+      "themes": [
+        "ia",
+        "ti"
+      ],
+      "title": "Microsoft Ignite 2026 (transmissão online)",
+      "uf": "EUA",
+      "url": "https://ignite.microsoft.com/",
+      "why": "Conferência anual da Microsoft sobre IA, Azure e segurança. A participação virtual é gratuita e serve bem para quem estuda Azure ou leva IA para a empresa.",
+      "id": "microsoft-ignite-2026"
+    },
+    {
+      "addedAt": "2026-10-30",
+      "audience": [
+        "processos",
+        "ti"
+      ],
+      "city": "Canoas",
+      "end": "2026-11-26",
+      "format": "presencial",
+      "km": 8,
+      "pick": true,
+      "price": "a confirmar",
+      "priceNote": "hackathon com inscrição por e-mail até 16/11",
+      "short": "CONIPC + Hackathon",
+      "source": "Sympla",
+      "start": "2026-11-25",
+      "themes": [
+        "saneamento",
+        "inovacao",
+        "ti"
+      ],
+      "title": "CONIPC Brasil 2026 + Hackathon Cidades Sábias",
+      "uf": "RS",
+      "url": "https://www.sympla.com.br/evento/hackathon-cidades-sabias/3608159",
+      "venue": "ParkShopping Canoas",
+      "why": "Congresso sobre PPPs e concessões municipais com prefeitos, concessionárias e investidores, tema direto para o saneamento. No dia 25 acontece o hackathon da prefeitura, com eixos de infraestrutura inteligente e transformação digital.",
+      "id": "conipc-hackathon-canoas-2026"
+    },
+    {
+      "addedAt": "2026-10-30",
+      "audience": [
+        "processos"
+      ],
+      "city": "Porto Alegre",
+      "end": "2026-11-26",
+      "format": "presencial",
+      "km": 20,
+      "price": "pago",
+      "short": "DiretorIA (Share)",
+      "source": "Sympla",
+      "start": "2026-11-26",
+      "themes": [
+        "ia",
+        "processos"
+      ],
+      "time": "9h–17h",
+      "title": "DiretorIA · Formação em IA para gestores",
+      "uf": "RS",
+      "url": "https://www.sympla.com.br/evento/diretoria-formacao-em-ia-para-diretores-e-gestores-presencial-porto-alegre-rs/3624397",
+      "venue": "Escola do Share",
+      "why": "Imersão de um dia sobre IA na tomada de decisão e leitura de dados, voltada a líderes e gestores.",
+      "id": "diretoria-share-2026-11-26"
+    },
+    {
+      "addedAt": "2026-10-30",
+      "audience": [
+        "ti",
+        "processos"
+      ],
+      "city": "Porto Alegre",
+      "end": "2026-11-26",
+      "format": "presencial",
+      "km": 22,
+      "price": "a confirmar",
+      "short": "Esquenta TDC: Governança IA",
+      "source": "Sympla",
+      "start": "2026-11-26",
+      "themes": [
+        "ia",
+        "ti"
+      ],
+      "time": "18h–20h",
+      "title": "Esquenta TDC · Governança é a chave para a IA corporativa?",
+      "uf": "RS",
+      "url": "https://www.sympla.com.br/evento/esquenta-tdc-governanca-e-a-chave-para-o-futuro-da-ia-corporativa/3630267",
+      "venue": "NAVI AI New Ventures, Tecnopuc",
+      "why": "Segurança e governança para adotar IA em empresa grande, com palestra de product manager do Magalu e painel com o presidente do SecOps Summit.",
+      "id": "esquenta-tdc-governanca-2026-11-26"
+    },
+    {
+      "addedAt": "2026-10-30",
+      "audience": [
+        "ti"
+      ],
+      "city": "Las Vegas",
+      "end": "2026-12-04",
+      "format": "online",
+      "price": "gratuito",
+      "priceNote": "keynotes transmitidas",
+      "short": "AWS re:Invent (online)",
+      "source": "AWS",
+      "start": "2026-11-30",
+      "themes": [
+        "ia",
+        "ti"
+      ],
+      "title": "AWS re:Invent 2026 (keynotes online)",
+      "uf": "EUA",
+      "url": "https://reinvent.awsevents.com/",
+      "why": "Maior evento de cloud do ano, com foco em IA agêntica. As keynotes ficam abertas online.",
+      "id": "aws-reinvent-2026"
+    },
+    {
+      "addedAt": "2026-10-30",
+      "audience": [
+        "processos",
+        "energia"
+      ],
+      "city": "Cachoeirinha",
+      "end": "2026-12-03",
+      "format": "presencial",
+      "km": 12,
+      "price": "pago",
+      "priceNote": "R$ 297 · 12 vagas",
+      "short": "Workshop IA Conecta",
+      "source": "Sympla",
+      "start": "2026-12-03",
+      "themes": [
+        "ia"
+      ],
+      "time": "13h–17h",
+      "title": "Workshop IA Conecta: agentes de IA na prática",
+      "uf": "RS",
+      "url": "https://www.sympla.com.br/evento/workshop-pratico-ia-conecta-visao-estrategia-acao/3633076",
+      "venue": "ACC · Associação Empresarial de Cachoeirinha",
+      "why": "Workshop introdutório e mão na massa para criar assistentes de IA e automatizar pesquisas e tarefas recorrentes. Bom ponto de partida para quem não é de TI.",
+      "id": "ia-conecta-cachoeirinha-2026-12-03"
+    },
+    {
+      "addedAt": "2026-10-30",
+      "audience": [
+        "ti"
+      ],
+      "city": "Porto Alegre",
+      "end": "2026-12-08",
+      "format": "presencial",
+      "km": 20,
+      "price": "a confirmar",
+      "short": "Meetup DevOpsDays",
+      "source": "Sympla",
+      "start": "2026-12-08",
+      "themes": [
+        "ti",
+        "automacao"
+      ],
+      "time": "18h–22h",
+      "title": "Meetup DevOpsDays Porto Alegre",
+      "uf": "RS",
+      "url": "https://www.sympla.com.br/evento/meetup-devopsdays-poa/3628472",
+      "venue": "UniSenac, Centro Histórico",
+      "why": "Quatro palestras sobre DevOps, automação e cloud no dia a dia, com networking da comunidade gaúcha. Em 2026 substitui a edição completa do DevOpsDays POA.",
+      "id": "meetup-devopsdays-poa-2026"
+    },
+    {
+      "addedAt": "2026-10-30",
+      "audience": [
+        "ti",
+        "processos"
+      ],
+      "city": "Porto Alegre",
+      "end": "2026-12-10",
+      "format": "presencial",
+      "km": 25,
+      "pick": true,
+      "price": "pago",
+      "priceNote": "desconto para grupos corporativos",
+      "short": "TDC Experience POA",
+      "source": "Sympla",
+      "start": "2026-12-09",
+      "themes": [
+        "ia",
+        "ti",
+        "processos"
+      ],
+      "time": "9h–20h",
+      "title": "TDC Experience Porto Alegre 2026",
+      "uf": "RS",
+      "url": "https://www.sympla.com.br/evento/tdc-experience-porto-alegre-2026/3531744",
+      "venue": "Centro de Eventos BarraShoppingSul",
+      "why": "O maior evento de tecnologia do fim de ano no RS. Trilhas de arquiteturas com IA agêntica, engenharia orientada a dados, governança e liderança técnica, além de workshops e hub de mentorias.",
+      "id": "tdc-experience-poa-2026"
+    }
+  ]
+}
