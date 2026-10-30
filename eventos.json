@@ -1,7 +1,7 @@
 {
   "meta": {
     "updatedAt": "2026-10-30",
-    "weekNote": "Novembro segue forte: PMI-RS Summit (13–14) e COBEE para energia, CONIPC em Canoas para saneamento e o TDC em dezembro para TI. Janeiro ainda sem eventos confirmados.",
+    "weekNote": "Novembro segue forte: BPM Day RS (12) e PMI-RS Summit (13–14) para processos, COBEE para energia, CONIPC em Canoas para saneamento e o TDC em dezembro para TI. Janeiro ainda sem eventos confirmados.",
     "window": "2026-10-30 a 2027-01-31"
   },
   "events": [
@@ -30,6 +30,35 @@
       "venue": "Instituto Caldeira",
       "why": "Palestra de um Java Champion (IBM) sobre agentes de IA e painel sobre levar IA da experimentação para a operação. Tem workshop de sistemas multiagentes da FIAP com vagas limitadas e inscrição separada.",
       "id": "esquenta-tdc-ia-agentica-2026-11-04"
+    },
+    {
+      "id": "abpmp-bpm-day-rs-2026",
+      "title": "BPM Day Rio Grande do Sul 2026 · ABPMP",
+      "short": "BPM Day RS (ABPMP)",
+      "start": "2026-11-12",
+      "end": "2026-11-12",
+      "time": "9h–18h",
+      "venue": "Auditório Unisinos",
+      "city": "Porto Alegre",
+      "uf": "RS",
+      "km": 20,
+      "format": "presencial",
+      "price": "pago",
+      "priceNote": "1º lote gratuito (limitado); depois R$ 60–80; estudantes R$ 30",
+      "themes": [
+        "processos",
+        "ia",
+        "inovacao"
+      ],
+      "audience": [
+        "processos",
+        "ti"
+      ],
+      "why": "Encontro da ABPMP sobre gestão de processos com IA: como pessoas, processos e tecnologia constroem organizações mais eficientes. Cases de empresas, escritórios de processos e painéis com Unisinos, UFRGS e PUCRS. Para quem trabalha com processos, excelência operacional e transformação digital.",
+      "url": "https://www.sympla.com.br/evento/abpmp-bpm-day-rio-grande-do-sul/3607957",
+      "source": "Sympla",
+      "addedAt": "2026-10-30",
+      "pick": true
     },
     {
       "id": "pmi-rs-summit-2026",
