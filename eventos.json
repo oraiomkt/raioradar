@@ -1,7 +1,7 @@
 {
   "meta": {
     "updatedAt": "2026-10-30",
-    "weekNote": "Novembro concentra os melhores eventos: COBEE para eficiência energética, CONIPC em Canoas para o saneamento e o TDC em dezembro para TI. Janeiro ainda está vazio; a busca de cada segunda vai completar.",
+    "weekNote": "Novembro segue forte: PMI-RS Summit (13–14) e COBEE para energia, CONIPC em Canoas para saneamento e o TDC em dezembro para TI. Janeiro ainda sem eventos confirmados.",
     "window": "2026-10-30 a 2027-01-31"
   },
   "events": [
@@ -30,6 +30,33 @@
       "venue": "Instituto Caldeira",
       "why": "Palestra de um Java Champion (IBM) sobre agentes de IA e painel sobre levar IA da experimentação para a operação. Tem workshop de sistemas multiagentes da FIAP com vagas limitadas e inscrição separada.",
       "id": "esquenta-tdc-ia-agentica-2026-11-04"
+    },
+    {
+      "id": "pmi-rs-summit-2026",
+      "title": "PMI-RS Summit 2026: Human + IA",
+      "short": "PMI-RS Summit",
+      "start": "2026-11-13",
+      "end": "2026-11-14",
+      "venue": "Hub de Inovação do Tecnopuc",
+      "city": "Porto Alegre",
+      "uf": "RS",
+      "km": 20,
+      "format": "presencial",
+      "price": "pago",
+      "priceNote": "ingresso via Sympla",
+      "themes": [
+        "processos",
+        "ia",
+        "inovacao"
+      ],
+      "audience": [
+        "processos",
+        "ti"
+      ],
+      "why": "Encontro de gestão de projetos que discute como a IA muda o trabalho de quem lidera equipes e entrega resultados. Vale para gerentes de projetos, líderes de processos e de operação.",
+      "url": "https://www.sympla.com.br/evento/pmi-rs-summit-2026/3503520",
+      "source": "Sympla / PMI-RS",
+      "addedAt": "2026-10-30"
     },
     {
       "addedAt": "2026-10-30",
