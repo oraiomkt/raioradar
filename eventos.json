@@ -1,8 +1,8 @@
 {
   "meta": {
-    "updatedAt": "2026-10-30",
-    "weekNote": "Novembro segue forte: BPM Day RS (12) e PMI-RS Summit (13–14) para processos, COBEE para energia, CONIPC em Canoas para saneamento e o TDC em dezembro para TI. Janeiro ainda sem eventos confirmados.",
-    "window": "2026-10-30 a 2027-01-31"
+    "updatedAt": "2026-10-31",
+    "weekNote": "Entrou o Fórum IEL de Inovação (12/11, Teatro Fiergs), que cai no mesmo dia do BPM Day RS: escolha um dos dois. Novembro segue forte com PMI-RS Summit, COBEE e CONIPC; em dezembro, o TDC. Janeiro ainda sem eventos confirmados.",
+    "window": "2026-10-31 a 2027-01-31"
   },
   "events": [
     {
@@ -346,6 +346,35 @@
       "venue": "Centro de Eventos BarraShoppingSul",
       "why": "O maior evento de tecnologia do fim de ano no RS. Trilhas de arquiteturas com IA agêntica, engenharia orientada a dados, governança e liderança técnica, além de workshops e hub de mentorias.",
       "id": "tdc-experience-poa-2026"
+    },
+    {
+      "id": "forum-iel-inovacao-poa-2026",
+      "title": "Fórum IEL de Inovação 2026 · Porto Alegre",
+      "short": "Fórum IEL de Inovação",
+      "start": "2026-11-12",
+      "end": "2026-11-12",
+      "time": "a partir das 13h",
+      "venue": "Teatro Fiergs, Av. Assis Brasil, 8.787",
+      "city": "Porto Alegre",
+      "uf": "RS",
+      "km": 12,
+      "format": "presencial",
+      "price": "a confirmar",
+      "priceNote": "inscrição no site do IEL-RS; também em Caxias do Sul (18/11) e Santa Maria (26/11)",
+      "themes": [
+        "inovacao",
+        "industria",
+        "processos"
+      ],
+      "audience": [
+        "processos",
+        "energia"
+      ],
+      "why": "Encontro do Sistema Fiergs sobre como transformar inovação e tecnologia em resultado concreto para a indústria. Bom para quem leva projetos de melhoria e eficiência para a operação. Cai no mesmo dia do BPM Day RS, então vale escolher um dos dois.",
+      "url": "https://edu.ielrs.org.br/forum-iel-inovacao/",
+      "source": "Jornal do Comércio",
+      "addedAt": "2026-10-31",
+      "pick": false
     }
   ]
 }
