@@ -1,8 +1,8 @@
 {
   "meta": {
-    "updatedAt": "2026-10-31",
-    "weekNote": "Entrou o Fórum IEL de Inovação (12/11, Teatro Fiergs), que cai no mesmo dia do BPM Day RS: escolha um dos dois. Novembro segue forte com PMI-RS Summit, COBEE e CONIPC; em dezembro, o TDC. Janeiro ainda sem eventos confirmados.",
-    "window": "2026-10-31 a 2027-01-31"
+    "updatedAt": "2026-11-02",
+    "weekNote": "Semana de ajustes: a agenda segue forte em novembro (Esquenta TDC dia 4, BPM Day RS e Fórum IEL dia 12, PMI-RS Summit dia 13) e em dezembro com o TDC. Dezembro e janeiro ainda têm poucos eventos confirmados em processos, energia e saneamento.",
+    "window": "2026-11-02 a 2027-02-02"
   },
   "events": [
     {
@@ -59,6 +59,35 @@
       "source": "Sympla",
       "addedAt": "2026-10-30",
       "pick": true
+    },
+    {
+      "id": "forum-iel-inovacao-poa-2026",
+      "title": "Fórum IEL de Inovação 2026 · Porto Alegre",
+      "short": "Fórum IEL de Inovação",
+      "start": "2026-11-12",
+      "end": "2026-11-12",
+      "time": "a partir das 13h",
+      "venue": "Teatro Fiergs, Av. Assis Brasil, 8.787",
+      "city": "Porto Alegre",
+      "uf": "RS",
+      "km": 12,
+      "format": "presencial",
+      "price": "a confirmar",
+      "priceNote": "inscrição no site do IEL-RS; também em Caxias do Sul (18/11) e Santa Maria (26/11)",
+      "themes": [
+        "inovacao",
+        "industria",
+        "processos"
+      ],
+      "audience": [
+        "processos",
+        "energia"
+      ],
+      "why": "Encontro do Sistema Fiergs sobre como transformar inovação e tecnologia em resultado concreto para a indústria. Bom para quem leva projetos de melhoria e eficiência para a operação. Cai no mesmo dia do BPM Day RS, então vale escolher um dos dois.",
+      "url": "https://edu.ielrs.org.br/forum-iel-inovacao/",
+      "source": "Jornal do Comércio",
+      "addedAt": "2026-10-31",
+      "pick": false
     },
     {
       "id": "pmi-rs-summit-2026",
@@ -346,35 +375,6 @@
       "venue": "Centro de Eventos BarraShoppingSul",
       "why": "O maior evento de tecnologia do fim de ano no RS. Trilhas de arquiteturas com IA agêntica, engenharia orientada a dados, governança e liderança técnica, além de workshops e hub de mentorias.",
       "id": "tdc-experience-poa-2026"
-    },
-    {
-      "id": "forum-iel-inovacao-poa-2026",
-      "title": "Fórum IEL de Inovação 2026 · Porto Alegre",
-      "short": "Fórum IEL de Inovação",
-      "start": "2026-11-12",
-      "end": "2026-11-12",
-      "time": "a partir das 13h",
-      "venue": "Teatro Fiergs, Av. Assis Brasil, 8.787",
-      "city": "Porto Alegre",
-      "uf": "RS",
-      "km": 12,
-      "format": "presencial",
-      "price": "a confirmar",
-      "priceNote": "inscrição no site do IEL-RS; também em Caxias do Sul (18/11) e Santa Maria (26/11)",
-      "themes": [
-        "inovacao",
-        "industria",
-        "processos"
-      ],
-      "audience": [
-        "processos",
-        "energia"
-      ],
-      "why": "Encontro do Sistema Fiergs sobre como transformar inovação e tecnologia em resultado concreto para a indústria. Bom para quem leva projetos de melhoria e eficiência para a operação. Cai no mesmo dia do BPM Day RS, então vale escolher um dos dois.",
-      "url": "https://edu.ielrs.org.br/forum-iel-inovacao/",
-      "source": "Jornal do Comércio",
-      "addedAt": "2026-10-31",
-      "pick": false
     }
   ]
 }
