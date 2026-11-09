@@ -1,8 +1,8 @@
 {
   "meta": {
-    "updatedAt": "2026-11-02",
-    "weekNote": "Semana de ajustes: a agenda segue forte em novembro (Esquenta TDC dia 4, BPM Day RS e Fórum IEL dia 12, PMI-RS Summit dia 13) e em dezembro com o TDC. Dezembro e janeiro ainda têm poucos eventos confirmados em processos, energia e saneamento.",
-    "window": "2026-11-02 a 2027-02-02"
+    "updatedAt": "2026-11-09",
+    "weekNote": "Destaques da semana: BPM Day RS e Fórum IEL (dia 12), PMI-RS Summit (13 e 14) e COBEE (16 e 17), com o TDC Experience em dezembro. Dezembro a fevereiro seguem com poucos eventos confirmados em processos, energia e saneamento.",
+    "window": "2026-11-09 a 2027-02-09"
   },
   "events": [
     {
@@ -14,7 +14,6 @@
       "end": "2026-11-04",
       "format": "presencial",
       "km": 20,
-      "pick": true,
       "price": "a confirmar",
       "short": "Esquenta TDC: IA Agêntica",
       "source": "Sympla",
