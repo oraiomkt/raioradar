@@ -1,8 +1,8 @@
 {
   "meta": {
-    "updatedAt": "2026-11-09",
-    "weekNote": "Destaques da semana: BPM Day RS e Fórum IEL (dia 12), PMI-RS Summit (13 e 14) e COBEE (16 e 17), com o TDC Experience em dezembro. Dezembro a fevereiro seguem com poucos eventos confirmados em processos, energia e saneamento.",
-    "window": "2026-11-09 a 2027-02-09"
+    "updatedAt": "2026-11-16",
+    "weekNote": "Destaques: COBEE (16 e 17), CONIPC com hackathon em Canoas (25 e 26), o novo Technow do Bem da SUCESU-RS, gratuito, no dia 27, e o TDC Experience em dezembro. De janeiro a meados de fevereiro ainda não há eventos confirmados no RS em processos, energia e saneamento.",
+    "window": "2026-11-16 a 2027-02-16"
   },
   "events": [
     {
@@ -57,7 +57,7 @@
       "url": "https://www.sympla.com.br/evento/abpmp-bpm-day-rio-grande-do-sul/3607957",
       "source": "Sympla",
       "addedAt": "2026-10-30",
-      "pick": true
+      "pick": false
     },
     {
       "id": "forum-iel-inovacao-poa-2026",
@@ -271,6 +271,35 @@
       "venue": "NAVI AI New Ventures, Tecnopuc",
       "why": "Segurança e governança para adotar IA em empresa grande, com palestra de product manager do Magalu e painel com o presidente do SecOps Summit.",
       "id": "esquenta-tdc-governanca-2026-11-26"
+    },
+    {
+      "id": "technow-do-bem-2026",
+      "title": "Technow do Bem 2026 (SUCESU-RS)",
+      "short": "Technow do Bem",
+      "start": "2026-11-27",
+      "end": "2026-11-27",
+      "time": "9h–18h",
+      "venue": "Fundação Pão dos Pobres (Rua da República, 801)",
+      "city": "Porto Alegre",
+      "uf": "RS",
+      "km": 22,
+      "format": "presencial",
+      "price": "gratuito",
+      "priceNote": "inscrição até 23/11",
+      "themes": [
+        "ia",
+        "ti",
+        "inovacao"
+      ],
+      "audience": [
+        "ti",
+        "processos"
+      ],
+      "why": "Dia de palestras e painéis sobre inteligência artificial, com a premiação dos projetos do Hackathon do Bem e a inauguração de um hub de inovação social. Bom para quem trabalha com TI e quer ver tecnologia aplicada a impacto social, com networking do ecossistema gaúcho.",
+      "url": "https://technowdobem2026.eventize.com.br/",
+      "source": "SUCESU-RS",
+      "addedAt": "2026-11-16",
+      "pick": true
     },
     {
       "addedAt": "2026-10-30",
